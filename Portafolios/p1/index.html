@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datos De Estudiante</title>
+    <style>
+        body{ font-family: system-ui, Arial, sans-serif; max-width: 1000px; margin: 40px; line-height: 1.4;}
+        header{ margin-bottom: 16px;}
+        img{max-width: 180px; height: auto; border-radius: 8px;}
+        .dato b{display: inline-block; width: 70px;} /*separador del texto en parte del nombre*/
+        section{margin: 16px 0;}
+    </style>
+</head>
+
+<!-- parte de enlistado nombre e informacion de estudiante -->
+<body>
+<header>
+    <h1>Informacion De Estudiante</h1>
+    <section aria-labelledby="titulo-datos">
+        <h2 id="titulo-datos">Datos Personales</h2>
+        <p class="dato"><b>Nombre:</b>Jose Emiliano Puga Saucedo</p>
+        <p class="dato"><b>Carrera:</b>Ingeniero en Tecnologías de la Información E Innovación Digital (ITIID)</p>
+        <!-- Enlace al correo -->
+        <p class="dato"><b>Correo:</b><a href="mailto:2430284@upv.edu.mx">2430284@upv.edu.mx</a></p> <!-- mailto hace que se abra el enlace del correo-->
+    </section>
+    <section aria-labelledby="titulo-imagen">
+        <h2 id="titulo-imagen">Foto</h2>
+        <figure>
+            <img src ="Fotomia2.jpeg" alt="Foto De Jose Emiliano Puga Saucedo">
+            <figcaption>Estudiante: Jose Emiliano Puga Saucedo</figcaption>
+        </figure>
+    </section>
+<section aria-labelledby="titulo-horario">
+    <h2 id="titulo-horario">Horario de Clases</h2>
+    <table border="1" cellspacing="0" cellpadding="5">
+    <thead>
+        <tr>
+        <th>Materia</th>
+        <th>Profesor</th>
+        <th>Grupo</th>
+        <th>Lunes</th>
+        <th>Martes</th>
+        <th>Miércoles</th>
+        <th>Jueves</th>
+        <th>Viernes</th>
+        <th>Créditos</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+        <td>Inglés IV</td>
+        <td>Juan Manuel Guzmán Martínez</td>
+        <td>ITIID-76124</td>
+        <td>08:50 - 09:44 A210 (A4)</td>
+        <td>08:50 - 09:44 A210 (A4)</td>
+        <td>08:50 - 09:44 A210 (A4)</td>
+        <td>08:50 - 09:44 A210 (A4)</td>
+        <td>08:50 - 09:44 A210 (A4)</td>
+        <td>5</td>
+        </tr>
+        <tr>
+        <td>Ética Profesional</td>
+        <td>Vanessa Janeth Lara Valdez</td>
+        <td>ITIID-76125</td>
+        <td>11:10 - 12:04 A210 (A4)</td>
+        <td>11:10 - 12:04 A210 (A4)</td>
+        <td>11:10 - 12:04 A210 (A4)</td>
+        <td>11:10 - 12:04 A210 (A4)</td>
+        <td>11:10 - 12:04 A210 (A4)</td>
+        <td>4</td>
+        </tr>
+        <tr>
+        <td>Cálculo de Varias Variables</td>
+        <td>Ma. Gloria Guerrero Tinajero</td>
+        <td>ITIID-76126</td>
+        <td>07:55 - 08:49 A210 (A4)</td>
+        <td>07:55 - 08:49 A210 (A4)</td>
+        <td>07:55 - 08:49 A210 (A4)</td>
+        <td>07:55 - 08:49 A210 (A4)</td>
+        <td>07:55 - 08:49 A210 (A4)</td>
+        <td>5</td>
+        </tr>
+        <tr>
+        <td>Aplicaciones Web</td>
+        <td>Mario Humberto Rodríguez Chávez</td>
+        <td>ITIID-76127</td>
+        <td>07:00 - 07:54 A210 (A4)</td>
+        <td>07:00 - 07:54 A210 (A4)</td>
+        <td>07:00 - 07:54 A210 (A4)</td>
+        <td>07:00 - 07:54 A210 (A4)</td>
+        <td>07:00 - 07:54 A210 (A4)</td>
+        <td>5</td>
+        </tr>
+        <tr>
+        <td>Estructura de Datos</td>
+        <td>Said Polanco Martagón</td>
+        <td>ITIID-76128</td>
+        <td>13:00 - 13:54 A210 (A4)</td>
+        <td>13:00 - 13:54 A210 (A4)</td>
+        <td>13:00 - 13:54 A210 (A4)</td>
+        <td>13:00 - 13:54 A210 (A4)</td>
+        <td>13:00 - 13:54 A210 (A4)</td>
+        <td>5</td>
+        </tr>
+        <tr>
+        <td>Desarrollo de Aplicaciones Móviles</td>
+        <td>Marco Aurelio Nuño Maganda</td>
+        <td>ITIID-76129</td>
+        <td>12:05 - 12:59 A210 (A4)</td>
+        <td>12:05 - 12:59 A210 (A4)</td>
+        <td>12:05 - 12:59 A210 (A4)</td>
+        <td>12:05 - 12:59 A210 (A4)</td>
+        <td>11:10 - 12:04 A210 (A4)</td>
+        <td>6</td>
+        </tr>
+        <tr>
+        <td>Análisis y Diseño de Software</td>
+        <td>Luis Roberto Flores de la Fuente</td>
+        <td>ITIID-76130</td>
+        <td>09:45 - 10:39 A210 (A4)</td>
+        <td>09:45 - 10:39 A210 (A4)</td>
+        <td>09:45 - 10:39 A210 (A4)</td>
+        <td>09:45 - 10:39 A210 (A4)</td>
+        <td>09:45 - 10:39 A210 (A4)</td>
+        <td>5</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+        <td colspan="8" style="text-align:right;"><b>Total de Créditos:</b></td>
+        <td>35</td>
+    </tr>
+    </tfoot>
+</table>
+</section>
+</header>
+</body>
+</html>
