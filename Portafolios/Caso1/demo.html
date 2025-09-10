@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafetería UPV</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="assets/img/favicon.png"> <!-- NUEVO FAVICON omg -->
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            <a href="#home" class="logo">
+                <i class="fas fa-coffee"></i>
+                Cafetería UPV
+            </a>
+
+            <!-- Nav bar con las secciónes de la página -->
+            <ul class="nav-links">
+                <li><a href="#menu" class="nav-link">Menú</a></li>
+                <li><a href="#pedido" class="nav-link">Pedido</a></li>
+                <li><a href="#informacion" class="nav-link">Información</a></li>
+                <li><a href="#mapa" class="nav-link">Mapa</a></li>
+                <li><a href="#buzon" class="nav-link">Buzón</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <!-- HOME SECTION -->
+        <section id="home" class="page-section container">
+            <div class="welcome-section">
+                <h1 class="welcome-title">Bienvenidos a Cafetería UPV</h1>
+            </div>
+            <div class="content-grid">
+                <div class="info-cards">
+                    <div class="info-card"> <!-- card - introducción -->
+                        <h2>¿Quiénes somos?</h2>
+                        <p>Somos la mejor cafetería en toda la Universidad Politécnica de Victoria, servimos los mejores guisos y las mejores bebidas.</p>
+                    </div>
+                    <div class="info-card"> <!-- card - saber más -->
+                        <h2>¿Deseas saber más?</h2>
+                        <p>Consulta lo que ofrecemos, información de contacto o nuestro horario usando nuestro menú interactivo a continuación.</p>
+                    </div>
+                </div>
+
+                <!-- section - img del hero section y button -->
+                <div class="tiger-section">
+                    <img src="./assets/img/tigre-hero.png" alt="Tigre UPV" class="tiger-image">
+                    <a href="#pedido" type="button" class="cta-button"> <!-- cambié esto de button a un anchor para poder usar href -->
+                        <i class="fas fa-arrow-right"></i>
+                        ¡Realiza tu pedido aquí!
+                        <i class="fas fa-arrow-left"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- MENU SECTION -->
+        <section id="menu" class="page-section container">
+            <div class="page-title-section">
+                <h1 class="page-title">Menú</h1>
+            </div>
+            <div class="menu-section">
+                <!-- menu - café -->
+                <h2 class="section-title">Café</h2>
+
+                <!-- menu items individuales -->
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <div class="item-image"><img src="./assets/img/carlos-v.png" alt="Carlos V"></div>
+                        <h3 class="item-name">Carlos V</h3>
+                        <p class="item-price">$30.00</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-image"><img src="./assets/img/capuchino.png" alt="Capuchino"></div>
+                        <h3 class="item-name">Capuchino</h3>
+                        <p class="item-price">$30.00</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-image"><img src="./assets/img/americano.png" alt="Americano"></div>
+                        <h3 class="item-name">Americano</h3>
+                        <p class="item-price">$30.00</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-image"><img src="./assets/img/espresso.png" alt="Espresso"></div>
+                        <h3 class="item-name">Espresso</h3>
+                        <p class="item-price">$30.00</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- menu - tacos -->
+            <div class="menu-section">
+                <h2 class="section-title">Tacos</h2>
+
+                <!-- menu items individuales -->
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <div class="item-image"><img src="./assets/img/orden-pastor.jpg" alt="Orden de Pastor"></div>
+                        <h3 class="item-name">Orden de Pastor</h3>
+                        <p class="item-price">$30.00</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-image"><img src="./assets/img/orden-bistec.jpg" alt="Orden de Bistec"></div>
+                        <h3 class="item-name">Orden de Bistec</h3>
+                        <p class="item-price">$30.00</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-image"><img src="./assets/img/orden-carne-asada.jpg" alt="Orden de Carne asada"></div>
+                        <h3 class="item-name">Orden de Carne asada</h3>
+                        <p class="item-price">$30.00</p>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-image"><img src="./assets/img/orden-chicharron.jpg" alt="Orden de Chicharrón"></div>
+                        <h3 class="item-name">Orden de Chicharrón</h3>
+                        <p class="item-price">$30.00</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PEDIDO SECTION -->
+        <section id="pedido" class="page-section container">
+            <div class="page-title-section">
+                <h1 class="page-title">Realizar Pedido</h1>
+            </div>
+            <div class="order-grid">
+                <div class="order-form-section">
+
+                    <!-- formulario - realizar pedido -->
+                    <div class="form-card">
+                        <form>
+                            <!-- input - nombre del producto -->
+                            <div class="form-group">
+                                <label>
+                                    <h2>¿Qué deseas comprar?</h2>
+                                    <input type="text" class="form-input" placeholder="Ingresa un producto..." required>
+                                </label>
+                            </div>
+
+                            <!-- formulario fila -->
+                            <div class="form-row">
+                                <!-- combobox - cantidad -->
+                                <div class="form-group">
+                                    <label for="cantidad" class="form-label">Cantidad</label>
+                                    <select id="cantidad" class="form-select">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                </div>
+
+                                <!-- input - nombre del cliente -->
+                                <div class="form-group">
+                                    <label for="nombre" class="form-label">Tu nombre</label>
+                                    <input type="text" id="nombre" class="form-input" placeholder="Cliente" required>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-primary btn-full">
+                                Confirmar nuevo pedido
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <div class="suggestions-section">
+                    <!-- card - mandar a buzón -->
+                    <div class="suggestion-card">
+                        <h2>¿No está lo que buscabas?</h2>
+                        <p>¡Te invitamos a dejar tus sugerencias para poder mejorar tu experiencia!</p>
+                        <a href="#buzon" type="button" class="btn btn-yellow btn-full">Sugerir nuevo producto</a> <!-- cambié esto de button a un anchor para poder usar href -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- INFORMACIÓN SECTION -->
+        <section id="informacion" class="page-section container">
+            <div class="page-title-section">
+                <h1 class="page-title">Información</h1>
+            </div>
+            <div class="info-grid">
+                <div class="info-section-header">
+                    <div class="info-header-card"><h2>Horario</h2></div>
+                    <div class="info-header-card"><h2>Contacto</h2></div>
+                </div>
+                <div class="info-details">
+                    <!-- card - horario -->
+                    <div class="info-detail-card">
+                        <h3>Lunes a Viernes</h3>
+                        <p class="schedule-time">7:50 A.M. - 4:00 P.M.</p>
+                        <p class="schedule-note">Puedes contactarnos por WhatsApp para confirmar disponibilidad.</p>
+                        <!-- button para modo wasap -->
+                        <button type="button" class="btn btn-whatsapp btn-full">
+                            <i class="fab fa-whatsapp"></i>
+                            Mensaje por WhatsApp
+                        </button>
+                    </div>
+                    <div class="contact-cards">
+                        <!-- card - email -->
+                        <div class="contact-card">
+                            <h3>Correo electrónico</h3>
+                            <p>2430233@upv.edu.mx</p>
+                        </div>
+                        <!-- card - num tel -->
+                        <div class="contact-card">
+                            <h3>Número telefónico</h3>
+                            <p>(+52) 834 123 4567</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MAPA SECTION -->
+        <section id="mapa" class="page-section container">
+            <div class="page-title-section">
+                <h1 class="page-title">Mapa</h1>
+            </div>
+            <div class="map-grid">
+                <div class="address-section">
+                    <!-- card - dirección -->
+                    <div class="address-card">
+                        <h2>Dirección</h2>
+                        <p>Av. Nuevas Tecnologías 5902, Parque Científico y Tecnológico de Tamaulipas, 87138 Cdad. Victoria, Tamps.</p>
+                    </div>
+                    <a href="https://maps.app.goo.gl/o97wkaxvTNKxADfs9" type="button" class="btn btn-ivory btn-full" target="_blank" rel="noopener noreferrer"> <!-- cambié esto de button a un anchor para poder usar href -->
+                        <i class="fas fa-map-marker-alt"></i>
+                        Ver en Google Maps
+                    </a>
+                </div>
+                <div class="map-section">
+                    <!-- insertar el embed de google maps -->
+                    <div class="map-container">
+                        <iframe title="Mapa de la UPV" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3652.505079255671!2d-99.07946552519518!3d23.72936178958474!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x867951bd5407d2a9%3A0x1dfa01b571fe2685!2sUniversidad%20Polit%C3%A9cnica%20de%20Victoria!5e0!3m2!1ses-419!2smx!4v1757511818238!5m2!1ses-419!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BUZÓN SECTION -->
+        <section id="buzon" class="page-section container">
+            <div class="page-title-section">
+                <h1 class="page-title">Buzón De Sugerencias</h1>
+            </div>
+            <div class="suggestions-grid">
+                <div class="suggestion-form-section">
+                    <!-- formulario - sugerencia -->
+                    <div class="form-card">
+                        <div class="form-group">
+                            <label>
+                                <h2>¿Qué tienes en mente?</h2>
+                                <textarea class="form-textarea" placeholder="Escribe tu maravillosa idea..." rows="8"></textarea>
+                            </label>
+                        </div>
+                        <button type="button" class="btn btn-primary btn-full">
+                            Enviar sugerencia
+                        </button>
+                    </div>
+                </div>
+                <div class="warning-section">
+                    <!-- card - advertencia -->
+                    <div class="warning-card">
+                        <h2>Advertencia</h2>
+                        <p>Sugerencias basura, inapropiadas o fuera de contexto serán eliminadas y se tomarán las medidas correspondientes.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER (créditos) -->
+    <footer class="footer">
+        <div class="container">
+            <p>Sitio creado por César y Puga - 2025</p>
+        </div>
+    </footer>
+</body>
+</html>
