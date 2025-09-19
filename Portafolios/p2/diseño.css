@@ -3,69 +3,95 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+/* estilos generales */
 body {
   font-family: Arial, sans-serif;
-  background: #f9f9f9;
+  background: #f5f5f5;
   color: #333;
   line-height: 1.6;
 }
-
+/* del titulo */
 header {
-  background: #f6fa00;
-  color: #000;
-  padding: 20px;
+  background: #2c5aa0;
+  color: white;
+  padding: 25px;
   text-align: center;
 }
-
+/* estilo del h1 del titulo */
+header h1 {
+  font-size: 2.2em;
+  margin: 0;
+}
+/* estilos para la barra de navegacion */
 nav {
   display: flex;
   justify-content: center;
   gap: 10px;
-  background: #333;
-  padding: 10px;
+  background: #444;
+  padding: 15px;
+  flex-wrap: wrap;
 }
 
 nav a {
   text-decoration: none;
 }
-
+/* estilos para los botones de navegacion */
 nav button {
-  background: #4CAF50;
+  background: #5a9;
   color: white;
-  border: none;
-  padding: 10px 20px;
+  border: 1px solid #5a9;
+  padding: 10px 15px;
   cursor: pointer;
-  border-radius: 5px 5px 0 0;
-  transition: 0.3s;
-  font-size: 15px;
+  border-radius: 5px;
+  transition: all 0.2s;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  min-width: 120px;
+  text-align: center;
 }
-
+/* efecto al pasar el cursor sobre el boton */
 nav button:hover {
-  background: #45a049;
+  background: #4a8;
+  border-color: #4a8;
+  transform: translateY(-1px);
 }
-
+/* efecto al presionar el boton */
+nav button:active {
+  transform: translateY(0);
+}
+/* estilos para el contenido principal */
 main {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 20px;
+  max-width: 850px;
+  margin: 20px auto;
+  padding: 25px;
   background: white;
-  border-radius: 0 0 8px 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
-
+/* estilos para las secciones de contenido */
 h2 {
-  color: #4CAF50;
-  margin: 15px 0 10px;
+  color: #2c5aa0;
+  margin: 20px 0 12px;
+  font-size: 1.3em;
+  border-bottom: 2px solid #5a9;
+  padding-bottom: 5px;
 }
-
+/* estilos para los parrafos */
+.contenido p {
+  margin-bottom: 18px;
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 5px;
+  border-left: 4px solid #5a9;
+}
+/* estilos para el pie de pagina */
 footer {
   text-align: center;
-  padding: 15px;
-  margin-top: 20px;
-  background: #333;
+  padding: 20px;
+  margin-top: 25px;
+  background: #444;
   color: white;
-  border-top: 3px solid #4CAF50;
+  border-top: 3px solid #5a9;
 }
 
 .contenido {
@@ -78,4 +104,27 @@ footer {
 
 #intro {
   display: block;
+}
+
+/* estilos responsivos para pantallas pequeñas */
+@media (max-width: 600px) {
+  nav {
+    padding: 10px;
+    gap: 6px;
+  }
+  
+  nav button {
+    padding: 8px 10px;
+    font-size: 12px;
+    min-width: 100px;
+  }
+  
+  main {
+    margin: 15px;
+    padding: 20px;
+  }
+  
+  header h1 {
+    font-size: 1.8em;
+  }
 }

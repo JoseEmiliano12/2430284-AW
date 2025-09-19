@@ -2,14 +2,15 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Práctica Frontend con JavaScript</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Práctica Frontend</title>
   <link rel="stylesheet" href="diseño.css">
 </head>
-<body>
+  <!---titulo de la pagina---> 
   <header>
-    <h1>Práctica Frontend con JavaScript</h1>
+    <h1>Práctica Frontend</h1>
   </header>
-// TODO: ================= BOTONES DE NAVEGACIÓN =================
+    <!--- botones de navegacion --->
   <nav>
     <a href="#intro"><button>Introducción y contexto</button></a>
     <a href="#q2"><button>Fundamentos del lenguaje</button></a>
@@ -18,93 +19,112 @@
     <a href="#q5"><button>Objetos y colecciones</button></a>
     <a href="#q6"><button>Otros temas básicos</button></a>
   </nav>
-// FIXME: ==================  PREGUNTAS  ==========================================
+  <!--- muestra las preguntas del boton introduccion y contexto--->
   <main>
-    <!-- Introducción y contexto -->
     <section id="intro" class="contenido">
-      <h2>1. ¿Qué es JavaScript y cuáles son sus principales usos en la web?</h2>
-      <p>Aquí escribes tu respuesta con tu punto de vista personal.</p>
+      <h2>¿1. Qué es JavaScript y cuáles son sus principales usos en la web?</h2>
+      <p>Es un lenguaje de programación que le agrega interactividad a la página funcionando junto con HTML y CSS para poder crear páginas web dinámicas y funcionales.</p>
 
       <h2>2. ¿En qué año y con qué propósito se creó JavaScript?</h2>
-      <p></p>
+      <p>JavaScript fue creado por Brendan Eich en el año 1995 con el propósito de poder añadir interactividad y funcionalidad a las páginas web.</p>
 
       <h2>3. ¿Por qué JavaScript no es lo mismo que Java?</h2>
-      <p></p>
+      <p>Porque JavaScript se diseñó para la interactividad en las páginas web y Java es un lenguaje de programación de propósito general.</p>
 
       <h2>4. ¿Cómo se complementa JavaScript con HTML y CSS?</h2>
-      <p></p>
+      <p>Se complementan ya que HTML proporciona la estructura de la página, CSS aplica el diseño y el estilo, y JavaScript añade interactividad y funcionalidad dinámica.</p>
     </section>
-
-    <!-- Fundamentos del lenguaje -->
+    <!--- muestra las preguntas del boton fundamentos del lenguaje--->
     <section id="q2" class="contenido">
       <h2>5. ¿Cuál es la sintaxis básica de JavaScript y cómo se escriben comentarios?</h2>
-      <p></p>
+      <p>La sintaxis básica de JavaScript incluye palabras clave, identificadores, operadores y estructuras de control. Los comentarios se pueden escribir utilizando // para comentarios de una sola línea y /* */ para comentarios de varias líneas.</p>
 
       <h2>6. ¿Qué diferencias hay entre var, let y const?</h2>
-      <p></p>
+      <p>var: Tiene alcance de función, se puede redeclarar y reasignar<br>
+      let: Tiene alcance de bloque, se puede reasignar pero no redeclarar<br>
+      const: Tiene alcance de bloque, no se puede reasignar ni redeclarar</p>
 
       <h2>7. ¿Cuáles son los tipos de datos primitivos en JavaScript? Da un ejemplo de cada uno.</h2>
-      <p></p>
+      <p>Existen 7 tipos de datos primitivos en JavaScript:<br>
+        - String: Representa texto. Ejemplo: let nombre = "Juan";<br>
+        - Number: Representa enteros como decimales. Ejemplo: let edad = 25;<br>
+        - Boolean: Solo puede tener dos valores true o false. Ejemplo: let esMayor = true;<br>
+        - Undefined: Variable que no ha sido asignada. Ejemplo: let x;<br>
+        - Null: Ausencia intencional de valor. Ejemplo: let y = null;<br>
+        - Symbol: Valor único e inmutable. Ejemplo: let id = Symbol("id");<br>
+        - BigInt: Números enteros muy grandes. Ejemplo: let numeroGrande = 123n;
+      </p>
 
       <h2>8. ¿Qué diferencia hay entre un array y un objeto en JavaScript?</h2>
-      <p></p>
+      <p>Los arrays se usan cuando se necesita una lista ordenada de elementos, mientras que los objetos se usan para representar algo con propiedades con nombre.</p>
 
       <h2>9. ¿Qué son y cómo se usan los operadores aritméticos, lógicos y relacionales?</h2>
-      <p></p>
+      <p>Los operadores son símbolos que permiten realizar operaciones sobre valores o variables. Existen varios tipos como el Aritmetico: para calculos matematicos, Logicos: Para tomar decisiones basadas en condiciones y la relacionales: para poder comparar valores.</p>
     </section>
-
+    <!--- muestra las preguntas del boton control de flujo--->
     <section id="q3" class="contenido">
       <h2>10. ¿Cómo funcionan las sentencias condicionales if, else y switch?</h2>
-      <p></p>
+      <p>El if, else if y else se usa cuando necesitas evaluar condiciones simples o multiples y el Switch cuando se compara un valor contra muchas opciones diferentes.</p>
 
       <h2>11. ¿Cuáles son las diferencias entre los bucles for, while y do...while?</h2>
-      <p></p>
+      <p>- Bucle for: Se usa cuando se conoce cuantas veces se va a repetir un bloque de codigo<br>
+      - Bucle while: Se usa cuando quieres repetir un bloque mientras una condicion sea verdadeda<br>
+      - Bucle do.....while: Es muy similar al while, pero la condicion se evalua despues de ejecutar el bloque</p>
 
       <h2>12. ¿Para qué sirven las palabras clave break y continue?</h2>
-      <p></p>
+      <p>Break: Sirve para detener la ejecucion del bucle completamente<br>
+      Continue: Sirve para saltat la iteracion actual del bucle y pasar directamente a la siguiente</p>
     </section>
-
+    <!--- muestra las preguntas del boton funciones--->
     <section id="q4" class="contenido">
       <h2>13. ¿Cómo se declara una función y cómo se llama en JavaScript?</h2>
-      <p></p>
+      <p>Declarar una funcion: Para declarar uan funcion se usa function y define un bloque de codigo<br>
+      Llamar una funcion: Para llamar una funcion se usa su nombre seguido de ()</p>
 
       <h2>14. ¿Qué significa que una función tenga parámetros y un valor de retorno?</h2>
-      <p></p>
+      <p>Las funciones que tienen parametros y valores de retorno sirven por que permiten escribir codigo reutilizable, flexible y organizado con los parametros una funcion puede trabajar con diferentes datos sin necesidad de reescribirse. y con el valor de retorno, puede devolver resultados que puedan ser usados en otras partes del programa como calculos condiciones o asignaciones</p>
 
       <h2>15. ¿Qué son las funciones flecha (=>) y qué ventajas tienen?</h2>
-      <p></p>
+      <p>Las funciones flechita (=>) son una forma mas moderna, limpiza de escribir funciones. son ideales para las tareas pequeñas y ayudan a que sea mas legible y eficiente</p>
 
       <h2>16. ¿Qué es el scope en JavaScript y cómo afecta a las variables?</h2>
-      <p></p>
+      <p>El scope en JavaScript determina donde una variable es accesible dentro del codigo.Puede ser global, de función o de bloque, y afecta directamente cómo y dónde puedes usar tus variables.</p>
     </section>
-
-    <!-- Objetos y colecciones -->
+    <!--- muestra las preguntas del boton objetos y colecciones--->
     <section id="q5" class="contenido">
       <h2>17. ¿Cómo se declara un objeto y cómo se accede a sus propiedades?</h2>
-      <p></p>
+      <p>Un Objeto de declara utilizando llaves {} y contiene pares de clave-valor (propiedad y su valor). se puede acceder alas propiedades de dos formas: notacion de punto (.) o notacion de corchetes ([])</p>
 
       <h2>18. ¿Qué diferencia hay entre una propiedad y un método en un objeto?</h2>
-      <p></p>
+      <p>En javaScript los objetos son estructuras claves que permiten agrupan datos las propiedades son las que representan los datos como nombre, edad y los metodos son funciones asociadas al objeto que definen su comportamiento como realizar una accion</p>
 
       <h2>19. Menciona al menos 3 métodos básicos de los arrays y explica cómo funcionan.</h2>
-      <p></p>
+      <p>push(): Agrega uno o mas elementos al final del array<br>
+      pop(): Elimina el ultimo elemento del array y lo devuelve<br>
+      shift(): Elimina el primer elemento del array y lo devuelve</p>
     </section>
-
+    <!--- muestra las preguntas del boton otros temas basicos--->
     <section id="q6" class="contenido">
       <h2>20. ¿Qué es el DOM y por qué es importante en el uso de JavaScript en páginas web?</h2>
-      <p></p>
+      <p>El DOM (Document Object Model) nos ayuda por va de la mano con el html sin el javaScript no podria ver ni cambiar lo que aparece la pagina web</p>
 
       <h2>21. ¿Qué es un evento en JavaScript? Menciona al menos 3 ejemplos comunes.</h2>
-      <p></p>
+      <p>Un evento en JavaScript es una acción o suceso que ocurre en el navegador, como un clic del mouse, una pulsación de tecla o la carga de una página. Ejemplos comunes de eventos son:<br>
+        - click: Se activa cuando el usuario hace clic en un elemento.<br>
+        - keydown: Se activa cuando el usuario presiona una tecla.<br>
+        - load: Se activa cuando una página o un recurso se ha cargado completamente.
+      </p>
 
       <h2>22. ¿Cuál es la diferencia entre alert, prompt y console.log?</h2>
-      <p></p>
+      <p>alert(): solo muestra un mensaje para avisos rapidos<br>
+      prompt(): muestra un mensaje y espera que el usuario ingrese un valor<br>
+      console.log(): muestra mensajes en la consola del navegador principalmente para depuracion y desarrollo</p>
 
       <h2>23. ¿Cómo se abre la consola del navegador y qué ventajas tiene usarla para depurar código?</h2>
-      <p></p>
+      <p>Para abrir la consola del navegador se usa el atajo del teclado: Ctrl + shift + j (en windows/Linux) otra forma seria dando click derecho en cual quier parte de l a pagina web y darle a inspeccionar para abrir las herramientas para desarrolladores y luego ir a la pestaña "consola"</p>
     </section>
   </main>
-// TODO: ==================  Pie de pagina  ==========================================
+    <!--- pie de pagina --->
   <footer>
     <p>Práctica 2 realizada por Jose Emiliano Puga Saucedo</p>
   </footer>
