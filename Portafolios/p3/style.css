@@ -1,0 +1,83 @@
+/* Estilo general del cuerpo */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #fef6f9 !important; /* rosa claro */
+  color: #333 !important;
+}
+
+/* Encabezado de tarjetas */
+.card-header.bg-primary {
+  background-color: #f6a5c0 !important; /* rosa pastel fuerte */
+  color: #ffffff !important;
+}
+
+/* Cuerpo de las tarjetas */
+.card {
+  border: none !important;
+  border-radius: 12px !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05) !important;
+}
+
+.card-body {
+  padding: 2.5rem !important;
+  background-color: #ffffff !important;
+}
+
+/* Campos de formulario */
+.form-control,
+.form-select {
+  border-radius: 8px !important;
+  border: 1px solid #e4c1f9 !important;
+  background-color: #fff0f6 !important;
+  color: #333 !important;
+  transition: all 0.3s ease !important;
+}
+
+.form-control:focus,
+.form-select:focus {
+  box-shadow: 0 0 0 0.25rem rgba(255, 182, 193, 0.4) !important;
+  border-color: #f6a5c0 !important;
+}
+
+/* Botones */
+.btn-primary {
+  background-color: #c1f9e4 !important;
+  border-color: #95e7d1 !important;
+  color: #333 !important;
+}
+
+.btn-primary:hover {
+  background-color: #a8e9d0 !important;
+  border-color: #7ed7b4 !important;
+}
+
+.btn-secondary {
+  background-color: #ffd6a5 !important;
+  border-color: #ffc078 !important;
+  color: #333 !important;
+}
+
+.btn-secondary:hover {
+  background-color: #ffbfa3 !important;
+  border-color: #ffac7d !important;
+}
+
+/* Tabla */
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: #fff9fb !important;
+}
+
+.table-hover tbody tr:hover {
+  background-color: #ffeef5 !important;
+}
+
+/* Botón de eliminar */
+.btn-danger {
+  background-color: #f67280 !important;
+  border-color: #f67280 !important;
+}
+
+.btn-danger:hover {
+  background-color: #f55367 !important;
+  border-color: #f4415b !important;
+}
