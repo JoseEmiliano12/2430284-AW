@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bienvenido</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h2 id="welcome-message">Hola, </h2>
+  </div>
+
+  <script>
+    // Obtiene el correo almacenado
+    const email = localStorage.getItem("loggedUser");
+
+    if (email) {
+      document.getElementById("welcome-message").textContent = `Hola, ${email}`;
+    } else {
+      // Si no hay usuario, redirigir a login
+      window.location.href = "index.html";
+    }
+  </script>
+</body>
+</html>

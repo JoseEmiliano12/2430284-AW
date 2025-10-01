@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gestión de Usuarios y Tareas</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container" id="login-container">
+    <h2>Iniciar Sesión</h2>
+    <input type="text" id="email" placeholder="Correo electrónico" />
+    <input type="password" id="password" placeholder="Contraseña" />
+    <button onclick="login()">Ingresar</button>
+    <p id="login-error" class="error"></p>
+  </div>
+
+  <div class="container hidden" id="dashboard">
+    <h2>Dashboard</h2>
+    <button class="logout" onclick="logout()">Cerrar sesión</button>
+
+    <section>
+      <h3>Usuarios</h3>
+      <table id="users-table"></table>
+    </section>
+
+    <section>
+      <h3>Tareas</h3>
+      <button class="add" onclick="crearTarea()">+ Nueva tarea</button>
+      <table id="tasks-table"></table>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
