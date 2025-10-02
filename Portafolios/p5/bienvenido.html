@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bienvenido</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h2 id="welcome-message">Hola, </h2>
+    <button id="logout" class="btn-logout">Cerrar Sesión</button>
+  </div>
+
+  <!-- Sección de tareas -->
+  <div class="container tasks-container">
+    <h3>Mis Tareas</h3>
+    <button id="add-task" class="btn-add">Agregar Tarea</button>
+
+    <!-- Tabla de tareas -->
+    <table id="tasks-table">
+      <thead>
+        <tr>
+          <th>Índice</th>
+          <th>Título</th>
+          <th>Descripción</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody id="tasks-body">
+        <!-- Aquí se añadirán las tareas dinámicamente -->
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Modal para editar/agregar tarea -->
+  <div id="edit-task-modal" class="modal hidden">
+    <div class="modal-content">
+      <h3>Editar Tarea</h3>
+      <input type="text" id="edit-title" placeholder="Título" />
+      <textarea id="edit-description" placeholder="Descripción"></textarea>
+      <button id="save-task" class="btn-save">Guardar cambios</button>
+      <button id="close-modal" class="btn-close">Cerrar</button>
+    </div>
+  </div>
+
+  <script>
+    // Obtiene el correo almacenado en localStorage
+    const email = localStorage.getItem("loggedUser");
+
+    if (email) {
+      document.getElementById("welcome-message").textContent = `Hola, ${email}`;
+    } else {
+      // Si no hay usuario, redirige a login
+      window.location.href = "index.html";
+    }
+
+    // Cerrar sesión
+    document.getElementById("logout").addEventListener("click", () => {
+      localStorage.removeItem("loggedUser");
+      window.location.href = "index.html";
+    });
+
+    // Lógica para manejar las tareas
+    let editTaskId;
+
+    const addTaskButton = document.getElementById("add-task");
+    const editModal = document.getElementById("edit-task-modal");
+    const saveTaskButton = document.getElementById("save-task");
+    const closeModalButton = document.getElementById("close-modal");
+    const editTitle = document.getElementById("edit-title");
+    const editDescription = document.getElementById("edit-description");
+
+    // Mostrar el modal para agregar tarea
+    addTaskButton.addEventListener("click", () => {
+      editTaskId = undefined;
+      editTitle.value = "";
+      editDescription.value = "";
+      document.querySelector(".modal-content h3").textContent = "Agregar Tarea";
+      editModal.classList.remove("hidden");
+      editModal.style.display = "flex";
+    });
+
+    // Guardar tarea editada o nueva
+    saveTaskButton.addEventListener("click", () => {
+      const title = editTitle.value.trim();
+      const description = editDescription.value.trim();
+
+      if (title && description) {
+        let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+        
+        if (editTaskId === undefined) {
+          // Agregar nueva tarea
+          const newId = tasks.length > 0 ? Math.max(...tasks.map(t => t.id)) + 1 : 1;
+          tasks.push({ id: newId, title, description });
+        } else {
+          // Actualizar tarea existente
+          tasks = tasks.map(t => (t.id === editTaskId ? { id: editTaskId, title, description } : t));
+        }
+
+        localStorage.setItem("tasks", JSON.stringify(tasks));
+        updateTaskTable();
+        editModal.classList.add("hidden");
+        editModal.style.display = "none";
+      } else {
+        alert("Por favor completa todos los campos");
+      }
+    });
+
+    // Actualizar la tabla de tareas
+    function updateTaskTable() {
+      const tbody = document.getElementById("tasks-body");
+      const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+      tbody.innerHTML = "";
+
+      if (tasks.length === 0) {
+        tbody.innerHTML = `
+          <tr>
+            <td colspan="4" style="text-align: center; color: #888;">No hay tareas. ¡Agrega una nueva!</td>
+          </tr>
+        `;
+        return;
+      }
+
+      tasks.forEach((task, index) => {
+        const tr = document.createElement("tr");
+        tr.innerHTML = `
+          <td>${index + 1}</td>
+          <td>${task.title}</td>
+          <td>${task.description}</td>
+          <td>
+            <button onclick="editTaskFromTable(${task.id})" class="btn-edit">Editar</button>
+            <button onclick="deleteTask(${task.id})" class="btn-delete">Eliminar</button>
+          </td>
+        `;
+        tbody.appendChild(tr);
+      });
+    }
+
+    // Función para editar tarea desde la tabla
+    window.editTaskFromTable = function(id) {
+      const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+      const task = tasks.find(t => t.id === id);
+      if (task) {
+        editTaskId = task.id;
+        editTitle.value = task.title;
+        editDescription.value = task.description;
+        document.querySelector(".modal-content h3").textContent = "Editar Tarea";
+        editModal.classList.remove("hidden");
+        editModal.style.display = "flex";
+      }
+    };
+
+    // Función para eliminar tarea
+    window.deleteTask = function(id) {
+      if (confirm("¿Estás seguro de eliminar esta tarea?")) {
+        let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+        tasks = tasks.filter(t => t.id !== id);
+        localStorage.setItem("tasks", JSON.stringify(tasks));
+        updateTaskTable();
+      }
+    };
+
+    // Cerrar el modal de edición
+    closeModalButton.addEventListener("click", () => {
+      editModal.classList.add("hidden");
+      editModal.style.display = "none";
+    });
+
+    // Cerrar modal al hacer clic fuera de él
+    editModal.addEventListener("click", (e) => {
+      if (e.target === editModal) {
+        editModal.classList.add("hidden");
+        editModal.style.display = "none";
+      }
+    });
+
+    // Inicializa la tabla de tareas al cargar
+    updateTaskTable();
+  </script>
+</body>
+</html>
